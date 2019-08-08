@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <Windows.h>
 #include "Board.h"
 
 
@@ -8,6 +9,7 @@
 
 int main()
 {
+	ShowWindow(GetConsoleWindow(), SW_HIDE);
 	srand(time(0));
 	sf::RenderWindow window(sf::VideoMode(770, 770), "2048");
 	Board board;
@@ -18,7 +20,10 @@ int main()
 		while (window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
+			{
 				window.close();
+				return 0;
+			}
 			if (event.type == sf::Event::KeyPressed)
 			{
 				switch (event.key.code)

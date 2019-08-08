@@ -4,7 +4,7 @@ Simple 2048 clone
 
 Made for learning purposes
 
-Not especially pretty or complete, but the logic works as it should.
+Not especially pretty or complete, but it is playable and the logic works as it should.
 
 Kent Odde, June 2019
 
